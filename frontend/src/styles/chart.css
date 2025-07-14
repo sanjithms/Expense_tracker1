@@ -1,0 +1,187 @@
+.chart-container {
+  max-width: 900px;
+  margin: 50px auto 20px; /* added top space for fixed navbar */
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #222;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Controls */
+.chart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.chart-controls select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 160px;
+  background-color: #f9f9f9;
+}
+
+.chart-controls button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.chart-controls button:hover {
+  background-color: #0056b3;
+}
+
+.chart-controls button.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.chart-wrapper canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.pie-chart canvas {
+  max-width: 320px !important;
+  height: auto !important;
+}
+
+/* Summary Boxes */
+.summary-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.summary-box {
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  min-width: 160px;
+  text-align: center;
+}
+
+.income-box {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.expense-box {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.balance-box {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Export Button */
+.export-btn {
+  background-color: #343a40 !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 30px auto 10px;
+  display: block;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.export-btn:hover {
+  background-color: #1e1e1e !important;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .chart-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chart-controls select,
+  .chart-controls button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .chart-wrapper {
+    padding: 10px 0;
+  }
+
+  .summary-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .pie-chart canvas {
+    max-width: 240px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .chart-container {
+    padding: 20px 15px;
+    margin-top: 50px;
+  }
+
+  .chart-controls select {
+    font-size: 14px;
+  }
+
+  .chart-controls button {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .summary-box {
+    font-size: 14px;
+  }
+
+  .export-btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
